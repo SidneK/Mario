@@ -54,6 +54,20 @@ public class InputUI : MonoBehaviour
 		throw new System.Exception("It's impossible");
 	}
 
+	public static bool GetKeyUp(UIKeyCode UIKey)
+	{
+		switch (UIKey)
+		{
+			case UIKeyCode.SPACE:
+				if (SpaceButton.IsPressedUp)
+					return true;
+				return false;
+			default:
+				return false;
+		}
+		throw new System.Exception("It's impossible");
+	}
+
 	public static int GetAxis(string axisName)
 	{
 		if (axisName == "Horizontal")

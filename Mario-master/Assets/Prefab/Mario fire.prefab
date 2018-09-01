@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4842908963710048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnFireballRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4875099956355778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnFireballLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4448723565912330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegsFire
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -68,11 +68,12 @@ GameObject:
   - component: {fileID: 114145599809953348}
   - component: {fileID: 114217001029265636}
   - component: {fileID: 114969210994551608}
+  - component: {fileID: 114919606418906128}
   - component: {fileID: 50325695814898846}
   - component: {fileID: 95633588074885758}
   - component: {fileID: 61464979380852904}
   - component: {fileID: 58598044142070894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mario fire
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1849023047903404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2162763, y: -2.4142783, z: 0}
+  m_LocalPosition: {x: -1.2162763, y: -2.4142783, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4448723565912330}
@@ -227,7 +228,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   CoordinateLegs: {fileID: 4448723565912330}
-  Speed: 20
+  Speed: 30
   JumpForce: 10
 --- !u!114 &114217001029265636
 MonoBehaviour:
@@ -240,11 +241,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c72d0ac004c0145b2dc167daa1f8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MarioLittle: {fileID: 1016473380728348, guid: 9630fc09da58824409e6aa6ee0f40b02,
-    type: 2}
-  MarioBig: {fileID: 1915150072179638, guid: c4652c5b428a0a848943b16aec95f6d3, type: 2}
-  MarioFire: {fileID: 1849023047903404}
-  ImmortalTime: 4
+--- !u!114 &114919606418906128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849023047903404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b4256e6b99aa4d9fd0fb069652df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114969210994551608
 MonoBehaviour:
   m_ObjectHideFlags: 1

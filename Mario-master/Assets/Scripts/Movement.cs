@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
 	private Rigidbody2D body_player;
 	private bool IsGround;
 	private bool IsDriftAvailable;
+	private bool IsUpSpeed;
 	private float agony_timer;
 	private float agony_time;
 	private float drift_timer;
@@ -23,7 +24,7 @@ public class Movement : MonoBehaviour
 	private float basic_jump_force;
 	private const int max_jump_force = 28;
 	private float basic_speed;
-	private const int max_speed = 26;
+	private const int max_speed = 40;
 	private int last_direction; // this is var. need for Drift
 
 	private void Start()
@@ -33,6 +34,7 @@ public class Movement : MonoBehaviour
 		body_player = GetComponent<Rigidbody2D>();
 		IsGround = false;
 		IsDriftAvailable = false;
+		IsUpSpeed = false;
 		agony_timer = 0;
 		agony_time = 2.5f;
 		drift_timer = 0;
@@ -48,13 +50,13 @@ public class Movement : MonoBehaviour
 	{
 		if (!Logic.Instance.IsGameOver && !Logic.Instance.StayPlayer)
 		{
-			IsGround = Physics2D.OverlapCircle(CoordinateLegs.position, 0.1f, Ground);
+			IsGround = Physics2D.OverlapCircle(CoordinateLegs.position, 0.2f, Ground);
 			Move();
 			if (InputUI.GetKeyDown(UIKeyCode.FIRE))
 				UpSpeed(2);
 			if (IsGround)
 				JumpForce = basic_jump_force; // default jump when player on ground
-			if (InputUI.GetKey(UIKeyCode.SPACE) && !IsGround)
+			if (IsUpSpeed && InputUI.GetKey(UIKeyCode.SPACE) && !IsGround)
 				UpJumpForceInAir();
 			if (InputUI.GetKeyDown(UIKeyCode.SPACE) && IsGround)
 				Jump(JumpForce);
@@ -161,6 +163,8 @@ public class Movement : MonoBehaviour
 			JumpForce += 2;
 			body_player.velocity = new Vector2(body_player.velocity.x, JumpForce / 2);
 		}
+		if (InputUI.GetKeyUp(UIKeyCode.SPACE))
+			IsUpSpeed = false;
 	}
 
 	private void UpSpeed(int speed)
@@ -171,13 +175,13 @@ public class Movement : MonoBehaviour
 
 	private void Jump(float jumpForce)
 	{
-		//Debug.Log("Jump");
 		state.SetInteger("State", (int)State.JUMP);
 		body_player.velocity = new Vector2(body_player.velocity.x, jumpForce);
 		if (Logic.Instance.ModePlayer == Mode.LITTLE)
 			Logic.Instance.JumpLittle.Play();
 		else
 			Logic.Instance.JumpSupper.Play();
+		IsUpSpeed = true;
 	}
 
 	private void Dead()
@@ -185,15 +189,14 @@ public class Movement : MonoBehaviour
 		Logic.Instance.IsGameOver = true;
 		GetComponent<BoxCollider2D>().enabled = false; // to go through some walls
 		GetComponent<CircleCollider2D>().enabled = false;
-		body_player.gravityScale = 1;
 		if (Logic.Instance.ModePlayer == Mode.LITTLE)
 		{
-			body_player.velocity = new Vector2(0, JumpForce - 10); // num 10 need for really jump
+			body_player.velocity = new Vector2(0, JumpForce + 5); // num 5 need for really jump
 			state.SetInteger("State", (int)State.DEATH_OR_SIT);
 		}
 		else
 			body_player.velocity = new Vector2(0, body_player.velocity.y);
-		Logic.Instance.BackgroundSound.Stop();
+		Logic.Instance.BackgroundMain.Stop();
 		Logic.Instance.MarioDie.Play();
 	}
 

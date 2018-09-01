@@ -23,10 +23,11 @@ GameObject:
   - component: {fileID: 50861478679926480}
   - component: {fileID: 114286475686022002}
   - component: {fileID: 114344224392984818}
+  - component: {fileID: 114085462807259870}
   - component: {fileID: 95196436481649160}
   - component: {fileID: 58385595006083632}
   - component: {fileID: 61792467189707948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mario little
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -41,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4402297773022806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegsLittle
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016473380728348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: -2.96, z: 0}
+  m_LocalPosition: {x: -2.3, y: -2.96, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4402297773022806}
@@ -153,6 +154,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114085462807259870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016473380728348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b4256e6b99aa4d9fd0fb069652df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114286475686022002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +180,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   CoordinateLegs: {fileID: 4402297773022806}
-  Speed: 20
+  Speed: 30
   JumpForce: 10
 --- !u!114 &114344224392984818
 MonoBehaviour:
@@ -181,10 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c72d0ac004c0145b2dc167daa1f8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MarioLittle: {fileID: 1016473380728348}
-  MarioBig: {fileID: 1915150072179638, guid: c4652c5b428a0a848943b16aec95f6d3, type: 2}
-  MarioFire: {fileID: 1849023047903404, guid: 4fdbb2cad487c63478fdf5afd78f23e3, type: 2}
-  ImmortalTime: 4
 --- !u!212 &212531058523676686
 SpriteRenderer:
   m_ObjectHideFlags: 1

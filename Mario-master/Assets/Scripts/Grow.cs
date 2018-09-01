@@ -2,19 +2,15 @@
 
 public class Grow : MonoBehaviour
 {
-	public GameObject MarioLittle;
-	public GameObject MarioBig;
-	public GameObject MarioFire;
-	public float ImmortalTime;
-
 	private Rigidbody2D body_player;
 	private Transform coordinate_player;
 	private Animator different;
 	private SpriteRenderer sprite;
 	private float timer_grow = 0;
-	private float time_grow = 1.4f;
+	private const float time_grow = 1.4f;
 	private float immortal_counter = 0;
 	private static float immortal_timer = 0;
+	private const float immortal_time = 4;
 
 	private void Start()
 	{
@@ -65,6 +61,7 @@ public class Grow : MonoBehaviour
 			different.SetInteger("State", (int)State.IMMORTAL);
 			Logic.Instance.StayPlayer = true;
 			Logic.Instance.IsImmortalPlayer = true;
+			Logic.Instance.PipeAndDownLevel.Play();
 		}
 	}
 
@@ -75,14 +72,14 @@ public class Grow : MonoBehaviour
 		switch (mode_player) // and instantiate new player
 		{
 			case Mode.LITTLE:
-				Instantiate(MarioLittle, coordinate_player.position, Quaternion.identity);
+				Instantiate(Logic.Instance.MarioLittle, coordinate_player.position, Quaternion.identity);
 				break;
 			case Mode.BIG:
 				coordinate_player.position = new Vector3(coordinate_player.position.x, coordinate_player.position.y + 0.32f, 0);
-				Instantiate(MarioBig, coordinate_player.position, Quaternion.identity);
+				Instantiate(Logic.Instance.MarioBig, coordinate_player.position, Quaternion.identity);
 				break;
 			case Mode.FIRE:
-				Instantiate(MarioFire, coordinate_player.position, Quaternion.identity);
+				Instantiate(Logic.Instance.MarioFire, coordinate_player.position, Quaternion.identity);
 				break;
 		}
 	}
@@ -107,7 +104,7 @@ public class Grow : MonoBehaviour
 			Logic.Instance.StayPlayer = false;
 			ChangeMode(Mode.LITTLE);
 		}
-		if (immortal_timer >= ImmortalTime)
+		if (immortal_timer >= immortal_time)
 		{
 			sprite.enabled = true;
 			immortal_timer = 0;

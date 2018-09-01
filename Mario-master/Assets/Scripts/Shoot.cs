@@ -26,7 +26,6 @@ public class Shoot : MonoBehaviour
 		IsShoot = false;
 		shoot_timer = 0;
 		shoot_time = 0.25f;
-		Physics2D.IgnoreCollision(Fireball.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 	}
 
 	private void FixedUpdate()

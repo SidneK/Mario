@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4785590932937282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegsBig
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -37,11 +37,12 @@ GameObject:
   - component: {fileID: 212333302573509128}
   - component: {fileID: 114526681738613930}
   - component: {fileID: 114114484805836682}
+  - component: {fileID: 114457318498950356}
   - component: {fileID: 50151791652505790}
   - component: {fileID: 95264877445983574}
   - component: {fileID: 61339073706335578}
   - component: {fileID: 58650400687395778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mario big
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915150072179638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1556418, y: -2.4744854, z: 0}
+  m_LocalPosition: {x: -1.1556418, y: -2.4744854, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4785590932937282}
@@ -164,11 +165,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c72d0ac004c0145b2dc167daa1f8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MarioLittle: {fileID: 1016473380728348, guid: 9630fc09da58824409e6aa6ee0f40b02,
-    type: 2}
-  MarioBig: {fileID: 1915150072179638}
-  MarioFire: {fileID: 1849023047903404, guid: 4fdbb2cad487c63478fdf5afd78f23e3, type: 2}
-  ImmortalTime: 4
+--- !u!114 &114457318498950356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915150072179638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b4256e6b99aa4d9fd0fb069652df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114526681738613930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   CoordinateLegs: {fileID: 4785590932937282}
-  Speed: 20
+  Speed: 30
   JumpForce: 10
 --- !u!212 &212333302573509128
 SpriteRenderer:

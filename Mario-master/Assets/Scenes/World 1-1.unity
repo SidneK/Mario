@@ -330,7 +330,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (33)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &6559870
@@ -376,7 +377,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (35)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &13938199
@@ -595,7 +597,13 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &30669034
@@ -934,6 +942,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 49747994}
+--- !u!1 &52508454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 271476386}
+--- !u!61 &52508455
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 52508454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.1193447, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5586896, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1 &59453372
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +980,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 59453374}
-  - component: {fileID: 59453373}
   m_Layer: 8
   m_Name: BlocksDown (14)
   m_TagString: Floor
@@ -950,31 +987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &59453373
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 59453372}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &59453374
 Transform:
   m_ObjectHideFlags: 0
@@ -1372,6 +1384,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.3188694
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.96154034
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -1653,7 +1685,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 83795288}
-  - component: {fileID: 83795287}
   m_Layer: 8
   m_Name: BlocksDown (1)
   m_TagString: Floor
@@ -1661,31 +1692,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &83795287
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 83795286}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &83795288
 Transform:
   m_ObjectHideFlags: 0
@@ -2205,7 +2211,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (74)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &100219656
@@ -2416,7 +2423,7 @@ Transform:
   - {fileID: 236615329}
   - {fileID: 1691083298}
   m_Father: {fileID: 0}
-  m_RootOrder: 237
+  m_RootOrder: 238
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &105314890
 Prefab:
@@ -2573,7 +2580,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (69)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &112900189 stripped
@@ -2590,7 +2598,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.954437
+      value: 62.9583
       objectReference: {fileID: 0}
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2623,6 +2631,20 @@ Prefab:
     - target: {fileID: 1652548514686272, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_Name
       value: Blue brick block (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.0226
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.9796274
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.2992544
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
@@ -2670,7 +2692,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (48)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &128778815
@@ -2761,6 +2784,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.3181809
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.9570101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -3058,7 +3101,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &144746880
@@ -3104,7 +3148,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &145401533
@@ -3359,7 +3404,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
+  m_Offset: {x: 19.494219, y: -3.3004498}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3370,7 +3415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
+  m_Size: {x: 45.76359, y: 1.3212249}
   m_EdgeRadius: 0
 --- !u!4 &165426091
 Transform:
@@ -3902,7 +3947,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (84)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &188328407
@@ -4376,6 +4422,7 @@ GameObject:
   - component: {fileID: 205453446}
   - component: {fileID: 205453445}
   - component: {fileID: 205453449}
+  - component: {fileID: 205453451}
   - component: {fileID: 205453450}
   m_Layer: 5
   m_Name: Interface
@@ -4475,7 +4522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7599cd69df48f6342bcc05a84482bac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BackgroundSound: {fileID: 1522201639}
+  BackgroundMain: {fileID: 1522201639}
+  BackgroundSecret: {fileID: 525766255}
   JumpLittle: {fileID: 1707134906}
   JumpSupper: {fileID: 87150938}
   MarioDie: {fileID: 497415771}
@@ -4486,8 +4534,13 @@ MonoBehaviour:
   UnEnableBlock: {fileID: 1561392654}
   BreakBlock: {fileID: 1674414424}
   Coin: {fileID: 133959228}
+  PipeAndDownLevel: {fileID: 1033581448}
   Mushroom: {fileID: 1420510436433742, guid: 1bf2811f0fbef81418f462e851415b4e, type: 2}
   Flower: {fileID: 1095220345137498, guid: 8033e2b799260de4882eefac35fd9e7f, type: 2}
+  MarioLittle: {fileID: 1016473380728348, guid: 9630fc09da58824409e6aa6ee0f40b02,
+    type: 2}
+  MarioBig: {fileID: 1915150072179638, guid: c4652c5b428a0a848943b16aec95f6d3, type: 2}
+  MarioFire: {fileID: 1849023047903404, guid: 4fdbb2cad487c63478fdf5afd78f23e3, type: 2}
   IsImmortalPlayer: 0
   StayPlayer: 0
   IsPause: 0
@@ -4504,11 +4557,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5738fe55204b73944946eed60a3d9e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &205453451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 205453444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c7a9acec14bee4b844170cba8d1c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainWorld: {fileID: 519420031}
+  SecretWorld: {fileID: 2110679013}
+  SpawnSecretRoom: {fileID: 1643211709}
+  SpawnMainRoom: {fileID: 956532744}
 --- !u!4 &206714233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 2062027023}
+--- !u!1 &211466390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211466392}
+  - component: {fileID: 211466391}
+  m_Layer: 0
+  m_Name: ToWorld
+  m_TagString: Main
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &211466391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211466390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.58298564, y: -0.4776888}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9007876, y: 0.04462242}
+  m_EdgeRadius: 0
+--- !u!4 &211466392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211466390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.89285713, y: -1.5570489, z: -8.921875}
+  m_LocalScale: {x: 0.59523803, y: 0.46730173, z: 1}
+  m_Children: []
+  m_Father: {fileID: 288952135}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &213813731
 Prefab:
   m_ObjectHideFlags: 0
@@ -4664,7 +4786,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (39)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &226106630
@@ -4710,7 +4833,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (58)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &226535043
@@ -4828,7 +4952,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230557613}
-  - component: {fileID: 230557612}
   m_Layer: 8
   m_Name: BlocksDown (15)
   m_TagString: Floor
@@ -4836,31 +4959,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &230557612
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 230557611}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &230557613
 Transform:
   m_ObjectHideFlags: 0
@@ -4993,6 +5091,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.63765544
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.5959593
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -5005,7 +5123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 241356228}
   - component: {fileID: 241356227}
-  - component: {fileID: 241356230}
   - component: {fileID: 241356229}
   m_Layer: 8
   m_Name: Hard pipe (1)
@@ -5067,11 +5184,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241356226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.37, y: -1.979, z: 0}
+  m_LocalPosition: {x: 33.364, y: -1.997, z: -1}
   m_LocalScale: {x: 2.1039, y: 2.070397, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1715502242}
   m_Father: {fileID: 0}
-  m_RootOrder: 236
+  m_RootOrder: 237
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &241356229
 BoxCollider2D:
@@ -5085,7 +5203,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0065822005, y: -0.15160239}
+  m_Offset: {x: 0.0065815747, y: -0.010268688}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5096,32 +5214,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5603049, y: 0.9967952}
-  m_EdgeRadius: 0
---- !u!61 &241356230
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 241356226}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0048103333, y: 0.48654112}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.67, y: 1.3}
-    newSize: {x: 0.67, y: 1.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.66037935, y: 0.31800002}
+  m_Size: {x: 0.60867983, y: 1.2794626}
   m_EdgeRadius: 0
 --- !u!1001 &246398414
 Prefab:
@@ -5188,7 +5281,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.992107
+      value: 62.99
       objectReference: {fileID: 0}
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5221,6 +5314,26 @@ Prefab:
     - target: {fileID: 1652548514686272, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_Name
       value: Blue brick block (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.98545456
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.3109093
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.30402339
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.9180467
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
@@ -5392,7 +5505,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (66)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &252974361
@@ -5540,7 +5654,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (27)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &260458649
@@ -5749,7 +5864,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &263059974 stripped
@@ -5765,7 +5881,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263675547}
-  - component: {fileID: 263675546}
   m_Layer: 8
   m_Name: BlocksDown (6)
   m_TagString: Floor
@@ -5773,31 +5888,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &263675546
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 263675545}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.2323041, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.310548, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &263675547
 Transform:
   m_ObjectHideFlags: 0
@@ -5863,7 +5953,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (36)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &264544712
@@ -6071,7 +6162,13 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (44)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &273651766
@@ -6335,7 +6432,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (65)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &284686840
@@ -6517,9 +6615,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 288952133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.53, y: -12.938, z: 0}
+  m_LocalPosition: {x: 70.53, y: -12.938, z: -1}
   m_LocalScale: {x: 1.68, y: 2.139945, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 211466392}
   m_Father: {fileID: 0}
   m_RootOrder: 227
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6778,7 +6877,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (46)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &307555498
@@ -7273,7 +7373,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (59)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &321821461
@@ -7284,7 +7385,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321821463}
-  - component: {fileID: 321821462}
   m_Layer: 8
   m_Name: BlocksDown (7)
   m_TagString: Floor
@@ -7292,31 +7392,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &321821462
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 321821461}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.2323041, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.310548, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &321821463
 Transform:
   m_ObjectHideFlags: 0
@@ -7382,7 +7457,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (56)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &337470016
@@ -7877,7 +7953,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (81)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &359638597
@@ -7979,7 +8056,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &366591622
@@ -8025,7 +8103,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (49)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &372522005
@@ -8239,7 +8318,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &389515636
@@ -8285,7 +8365,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (37)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &390352671
@@ -8331,7 +8412,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &396101288
@@ -8446,6 +8528,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 401633935}
+--- !u!1 &402384488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 144746880}
+--- !u!61 &402384489
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402384488}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.47627187}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 1.2725439}
+  m_EdgeRadius: 0
 --- !u!1001 &405663336
 Prefab:
   m_ObjectHideFlags: 0
@@ -8683,7 +8795,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 423528506}
-  - component: {fileID: 423528505}
   m_Layer: 8
   m_Name: BlocksDown (13)
   m_TagString: Floor
@@ -8691,31 +8802,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &423528505
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 423528504}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &423528506
 Transform:
   m_ObjectHideFlags: 0
@@ -9005,7 +9091,13 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &447741409
@@ -9051,7 +9143,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (30)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &450131226
@@ -9601,6 +9694,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.16000232
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.64065313
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -9617,7 +9730,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483269299}
-  - component: {fileID: 483269298}
   m_Layer: 8
   m_Name: FloorSecret (1)
   m_TagString: Floor
@@ -9625,31 +9737,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &483269298
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 483269297}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.9791393, y: -0.60579014}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.677074, y: 0.63557243}
-  m_EdgeRadius: 0
 --- !u!4 &483269299
 Transform:
   m_ObjectHideFlags: 0
@@ -9937,7 +10024,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (73)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &494914403
@@ -10265,6 +10353,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0015680864
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.32693744
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -10311,7 +10419,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &501771623
@@ -10323,7 +10432,6 @@ GameObject:
   m_Component:
   - component: {fileID: 501771625}
   - component: {fileID: 501771624}
-  - component: {fileID: 501771627}
   - component: {fileID: 501771626}
   m_Layer: 8
   m_Name: Hard pipe
@@ -10385,7 +10493,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501771623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.591, y: -1.979, z: 0}
+  m_LocalPosition: {x: 25.591, y: -1.997, z: -1}
   m_LocalScale: {x: 2.1039, y: 2.070397, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10403,7 +10511,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005682528, y: -0.15881014}
+  m_Offset: {x: 0.0036667585, y: -0.011331558}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10414,32 +10522,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55634224, y: 0.9823797}
-  m_EdgeRadius: 0
---- !u!61 &501771627
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 501771623}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0028413087, y: 0.4838875}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.67, y: 1.3}
-    newSize: {x: 0.67, y: 1.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.66431737, y: 0.30918324}
+  m_Size: {x: 0.6006875, y: 1.2773368}
   m_EdgeRadius: 0
 --- !u!1001 &503272408
 Prefab:
@@ -10708,7 +10791,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (41)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &516443453
@@ -10754,7 +10838,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &519020051
@@ -10800,7 +10885,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &519420028
@@ -10815,7 +10901,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainRoom
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11050,7 +11136,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &524217909
@@ -11104,6 +11191,130 @@ Prefab:
     - {fileID: 61291657370587632, guid: 4d461b6677162824ba00641f2b061699, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 4d461b6677162824ba00641f2b061699, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &525766253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525766254}
+  - component: {fileID: 525766255}
+  m_Layer: 0
+  m_Name: BackgroundSecret
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &525766254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525766253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152478789}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &525766255
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525766253}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 39fec14eef4a4034f8ae1fd9bc9d6b69, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &530331845
 Prefab:
   m_ObjectHideFlags: 0
@@ -11691,7 +11902,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (24)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &554138872
@@ -12063,7 +12275,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (77)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &575574421
@@ -12221,6 +12434,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.47910815
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.2788647
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -12313,7 +12546,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &599059404
@@ -12795,7 +13029,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (51)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &622464957
@@ -13664,7 +13899,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (62)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &667789801
@@ -13760,7 +13996,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4635602531241760, guid: 902acbf5e7b73f44db9ac048ecdf0f37, type: 2}
       propertyPath: m_RootOrder
-      value: 215
+      value: 213
       objectReference: {fileID: 0}
     - target: {fileID: 1493211332278742, guid: 902acbf5e7b73f44db9ac048ecdf0f37, type: 2}
       propertyPath: m_Layer
@@ -13871,7 +14107,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &676785053
@@ -14029,7 +14266,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &681111683
@@ -14350,7 +14588,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (79)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &714670173
@@ -14516,15 +14755,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 63.55
+      value: -4.005
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.36
+      value: -3.048
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalRotation.x
@@ -14546,6 +14785,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 54
       objectReference: {fileID: 0}
+    - target: {fileID: 1016473380728348, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286475686022002, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114085462807259870, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: SpawnSecretRoom
+      value: 
+      objectReference: {fileID: 1643211709}
+    - target: {fileID: 114085462807259870, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: SpawnMainRoom
+      value: 
+      objectReference: {fileID: 956532744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
   m_IsPrefabAsset: 0
@@ -14964,7 +15222,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (38)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &743796273
@@ -15056,7 +15315,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (70)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &745629929
@@ -15259,6 +15519,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.9585403
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.2377284
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -15464,7 +15744,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &761675829
@@ -15588,7 +15869,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 772179661}
-  - component: {fileID: 772179660}
   m_Layer: 8
   m_Name: BlocksDown (4)
   m_TagString: Floor
@@ -15596,31 +15876,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &772179660
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 772179659}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &772179661
 Transform:
   m_ObjectHideFlags: 0
@@ -15663,7 +15918,6 @@ GameObject:
   m_Component:
   - component: {fileID: 772297959}
   - component: {fileID: 772297958}
-  - component: {fileID: 772297957}
   - component: {fileID: 772297956}
   m_Layer: 8
   m_Name: Normal pipe (1)
@@ -15680,11 +15934,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 772297955}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0055242777, y: 0.16396856}
+  m_Offset: {x: 0.0016953349, y: -0.012983143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15695,32 +15949,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6237024, y: 0.2774071}
-  m_EdgeRadius: 0
---- !u!61 &772297957
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 772297955}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0027620345, y: -0.14963458}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.66}
-    newSize: {x: 0.69, y: 0.66}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5518793, y: 0.3608307}
+  m_Size: {x: 0.6007056, y: 0.6313106}
   m_EdgeRadius: 0
 --- !u!212 &772297958
 SpriteRenderer:
@@ -15775,7 +16004,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772297955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109.01, y: -2.7, z: 0}
+  m_LocalPosition: {x: 109.017, y: -2.713, z: -2}
   m_LocalScale: {x: 2.1039, y: 1.8829659, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15824,7 +16053,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (34)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &776862427
@@ -15947,7 +16177,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 781109635}
-  - component: {fileID: 781109634}
   m_Layer: 8
   m_Name: BlocksDown (12)
   m_TagString: Floor
@@ -15955,31 +16184,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &781109634
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 781109633}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &781109635
 Transform:
   m_ObjectHideFlags: 0
@@ -16072,7 +16276,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 785424319}
-  - component: {fileID: 785424318}
   m_Layer: 8
   m_Name: BlocksDown (24)
   m_TagString: Floor
@@ -16080,31 +16283,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &785424318
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 785424317}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.2323041, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.310548, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &785424319
 Transform:
   m_ObjectHideFlags: 0
@@ -16125,7 +16303,7 @@ Transform:
   - {fileID: 145401534}
   - {fileID: 1661651533}
   m_Father: {fileID: 0}
-  m_RootOrder: 216
+  m_RootOrder: 218
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &785699746
 Prefab:
@@ -16282,7 +16460,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (64)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &802063148
@@ -16939,7 +17118,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (24)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &855700182
@@ -17027,7 +17207,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
+  m_Offset: {x: 20.89204, y: -3.3032985}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -17038,7 +17218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
+  m_Size: {x: 48.559235, y: 1.3269222}
   m_EdgeRadius: 0
 --- !u!4 &865707110
 Transform:
@@ -17171,7 +17351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4635602531241760, guid: 902acbf5e7b73f44db9ac048ecdf0f37, type: 2}
       propertyPath: m_RootOrder
-      value: 210
+      value: 208
       objectReference: {fileID: 0}
     - target: {fileID: 1493211332278742, guid: 902acbf5e7b73f44db9ac048ecdf0f37, type: 2}
       propertyPath: m_Name
@@ -17572,7 +17752,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (32)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &896102232
@@ -17673,6 +17854,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.15829241
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.6403862
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -18165,7 +18366,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (55)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &905290474
@@ -18267,7 +18469,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &906997506
@@ -18518,7 +18721,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (34)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &924404853
@@ -18549,7 +18753,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9791393, y: -0.60579014}
+  m_Offset: {x: 1.9791393, y: -0.92323685}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18560,7 +18764,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.677074, y: 0.63557243}
+  m_Size: {x: 11.677074, y: 1.2704659}
   m_EdgeRadius: 0
 --- !u!4 &924404855
 Transform:
@@ -19143,6 +19347,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 956267680}
+--- !u!1 &956532743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956532744}
+  - component: {fileID: 956532745}
+  m_Layer: 0
+  m_Name: SpawnWorldRoom
+  m_TagString: UpPlayer
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956532744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956532743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 109.09, y: -3.84, z: -1.0478516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 241
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &956532745
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 956532743}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.039539337, y: 0.00000011920929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0615005, y: 0.26195693}
+  m_EdgeRadius: 0
 --- !u!1001 &956649947
 Prefab:
   m_ObjectHideFlags: 0
@@ -19414,6 +19672,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 964817537}
+--- !u!1 &979027194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 548736292}
+--- !u!61 &979027195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979027194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.48094022}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 1.2818806}
+  m_EdgeRadius: 0
 --- !u!1001 &982035932
 Prefab:
   m_ObjectHideFlags: 0
@@ -19569,7 +19857,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (83)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &989827835
@@ -19581,7 +19870,6 @@ GameObject:
   m_Component:
   - component: {fileID: 989827839}
   - component: {fileID: 989827838}
-  - component: {fileID: 989827837}
   - component: {fileID: 989827836}
   m_Layer: 8
   m_Name: Normal pipe (2)
@@ -19598,11 +19886,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 989827835}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0055242777, y: 0.16396856}
+  m_Offset: {x: 0.0055249333, y: -0.009445399}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19613,32 +19901,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6237024, y: 0.2774071}
-  m_EdgeRadius: 0
---- !u!61 &989827837
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 989827835}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0027620345, y: -0.14963458}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.66}
-    newSize: {x: 0.69, y: 0.66}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5518793, y: 0.3608307}
+  m_Size: {x: 0.6007092, y: 0.624235}
   m_EdgeRadius: 0
 --- !u!212 &989827838
 SpriteRenderer:
@@ -19693,7 +19956,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989827835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 120.21, y: -2.7, z: 0}
+  m_LocalPosition: {x: 120.21, y: -2.713, z: -1}
   m_LocalScale: {x: 2.1039, y: 1.8829659, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19798,7 +20061,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &995242835
@@ -20095,7 +20359,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9037051, y: -2.9630952}
+  m_Offset: {x: 1.9037051, y: -3.2862487}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -20106,7 +20370,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.582566, y: 0.64651585}
+  m_Size: {x: 10.582566, y: 1.2928226}
   m_EdgeRadius: 0
 --- !u!4 &1012140605
 Transform:
@@ -20235,7 +20499,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (54)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1022475584
@@ -20357,7 +20622,7 @@ Transform:
   m_LocalScale: {x: 4.4393086, y: 4.235988, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 220
+  m_RootOrder: 221
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1022795406
 Prefab:
@@ -20472,7 +20737,6 @@ GameObject:
   - component: {fileID: 1028209176}
   - component: {fileID: 1028209175}
   - component: {fileID: 1028209174}
-  - component: {fileID: 1028209173}
   m_Layer: 8
   m_Name: Normal pipe
   m_TagString: Block
@@ -20480,31 +20744,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1028209173
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1028209172}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0055242777, y: 0.16396856}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.66}
-    newSize: {x: 0.69, y: 0.66}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6237024, y: 0.2774071}
-  m_EdgeRadius: 0
 --- !u!61 &1028209174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20513,11 +20752,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 1028209172}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0027620345, y: -0.14963458}
+  m_Offset: {x: 0.002761811, y: -0.009891391}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -20528,7 +20767,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5518793, y: 0.3608307}
+  m_Size: {x: 0.60980576, y: 0.6403171}
   m_EdgeRadius: 0
 --- !u!212 &1028209175
 SpriteRenderer:
@@ -20583,7 +20822,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028209172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1103, y: -2.7, z: 0}
+  m_LocalPosition: {x: 12.1103, y: -2.723, z: -1}
   m_LocalScale: {x: 2.1039, y: 1.8829659, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20645,6 +20884,130 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 1028215660}
+--- !u!1 &1033581446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033581447}
+  - component: {fileID: 1033581448}
+  m_Layer: 0
+  m_Name: PipeAndDownLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1033581447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033581446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152478789}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1033581448
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033581446}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cd4e8a86d142e7a459eef69061efee8c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1035312346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
@@ -21206,7 +21569,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (30)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1059948259
@@ -21675,6 +22039,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.4784395
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.2775275
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -21721,7 +22105,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (57)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1090479730
@@ -21860,7 +22245,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (27)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1099516284
@@ -22018,7 +22404,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1105448384
@@ -22172,7 +22559,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1116518794
@@ -22653,7 +23041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143437317}
   - component: {fileID: 1143437318}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InvisibleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22740,6 +23128,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.00047960132
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.31968892
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -22838,6 +23246,8 @@ Transform:
   - {fileID: 1561392653}
   - {fileID: 1674414425}
   - {fileID: 133959229}
+  - {fileID: 1033581447}
+  - {fileID: 525766254}
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23154,7 +23564,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (20)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1181627168
@@ -23494,7 +23905,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4633525289601324, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_RootOrder
-      value: 217
+      value: 215
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.31718197
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.9550124
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -23507,7 +23938,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197187198}
-  - component: {fileID: 1197187197}
   m_Layer: 8
   m_Name: BlocksDown (22)
   m_TagString: Floor
@@ -23515,31 +23945,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1197187197
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1197187196}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1197187198
 Transform:
   m_ObjectHideFlags: 0
@@ -23571,7 +23976,7 @@ Transform:
   - {fileID: 13938200}
   - {fileID: 422291291}
   m_Father: {fileID: 0}
-  m_RootOrder: 213
+  m_RootOrder: 214
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1208178589
 Prefab:
@@ -23856,7 +24261,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1226266159}
-  - component: {fileID: 1226266158}
   m_Layer: 8
   m_Name: BlocksDown (3)
   m_TagString: Floor
@@ -23864,31 +24268,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1226266158
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1226266157}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1226266159
 Transform:
   m_ObjectHideFlags: 0
@@ -23965,7 +24344,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1229423847
@@ -24063,7 +24443,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (45)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1231902516
@@ -24594,7 +24975,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1252760243}
-  - component: {fileID: 1252760242}
   m_Layer: 8
   m_Name: BlocksDown (25)
   m_TagString: Floor
@@ -24602,31 +24982,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1252760242
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1252760241}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.2323041, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.310548, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1252760243
 Transform:
   m_ObjectHideFlags: 0
@@ -24647,7 +25002,7 @@ Transform:
   - {fileID: 1450082589}
   - {fileID: 287297213}
   m_Father: {fileID: 0}
-  m_RootOrder: 218
+  m_RootOrder: 220
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1253507347
 Prefab:
@@ -24748,7 +25103,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1265817587
@@ -25492,7 +25848,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1296429479 stripped
@@ -25548,7 +25905,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1300132674
@@ -25594,7 +25952,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (21)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1302652123
@@ -25640,7 +25999,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (75)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1303722517
@@ -25853,6 +26213,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.1570688
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.634786
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -26277,7 +26657,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1342626169
@@ -26425,7 +26806,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (21)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1345218103
@@ -26522,6 +26904,11 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -26884,7 +27271,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370739766}
-  - component: {fileID: 1370739765}
   m_Layer: 8
   m_Name: BlocksDown (21)
   m_TagString: Floor
@@ -26892,31 +27278,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1370739765
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1370739764}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1370739766
 Transform:
   m_ObjectHideFlags: 0
@@ -26948,7 +27309,7 @@ Transform:
   - {fileID: 1022795407}
   - {fileID: 359638598}
   m_Father: {fileID: 0}
-  m_RootOrder: 211
+  m_RootOrder: 212
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1371738056
 Prefab:
@@ -26992,6 +27353,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.15662888
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.6339062
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -27228,7 +27609,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1408241830}
-  - component: {fileID: 1408241829}
   m_Layer: 8
   m_Name: BlocksDown (11)
   m_TagString: Floor
@@ -27236,31 +27616,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1408241829
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1408241828}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1408241830
 Transform:
   m_ObjectHideFlags: 0
@@ -27337,7 +27692,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1411481484
@@ -27551,7 +27907,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1416476888
@@ -27730,7 +28087,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1420318937}
-  - component: {fileID: 1420318936}
   m_Layer: 8
   m_Name: BlocksDown (23)
   m_TagString: Floor
@@ -27738,31 +28094,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1420318936
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1420318935}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1420318937
 Transform:
   m_ObjectHideFlags: 0
@@ -27794,7 +28125,7 @@ Transform:
   - {fileID: 442634576}
   - {fileID: 902884284}
   m_Father: {fileID: 0}
-  m_RootOrder: 214
+  m_RootOrder: 216
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1420453116
 Prefab:
@@ -27900,7 +28231,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (50)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1428879829 stripped
@@ -27991,7 +28323,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_RootOrder
-      value: 219
+      value: 217
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -1.5463248
+      objectReference: {fileID: 0}
+    - target: {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 3.4026496
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
@@ -29182,7 +29524,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1495822575}
-  - component: {fileID: 1495822574}
   m_Layer: 8
   m_Name: BlocksDown (17)
   m_TagString: Floor
@@ -29190,31 +29531,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1495822574
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495822573}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.6311212, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.5129137, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1495822575
 Transform:
   m_ObjectHideFlags: 0
@@ -29439,7 +29755,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (80)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1506853341
@@ -29653,7 +29970,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (35)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1520758404
@@ -29886,6 +30204,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1527643156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527643158}
+  - component: {fileID: 1527643157}
+  m_Layer: 0
+  m_Name: Hide Mario
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1527643157
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527643156}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a7252e069d3edd14aa25185355c3e6af, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.41, y: 0.93}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1527643158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527643156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.294, y: -13.625, z: -2}
+  m_LocalScale: {x: 1.0229647, y: 9.660379, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 242
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1528362550
 Prefab:
   m_ObjectHideFlags: 0
@@ -30549,7 +30942,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (71)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1561392652
@@ -30923,9 +31317,64 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (63)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1586934015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586934017}
+  - component: {fileID: 1586934016}
+  m_Layer: 0
+  m_Name: DestroyBegin
+  m_TagString: Destroy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1586934016
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586934015}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6181226, y: 0.15951633}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.3836927, y: 1.3190327}
+  m_EdgeRadius: 0
+--- !u!4 &1586934017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586934015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.77, y: -5.97, z: -9.953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 239
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1589597806
 Prefab:
   m_ObjectHideFlags: 0
@@ -31305,6 +31754,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0015996099
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.3174491
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -31616,7 +32085,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (32)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1623370607
@@ -32116,7 +32586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1643211709}
   m_Layer: 0
-  m_Name: SpawnMario
+  m_Name: SpawnSecretRoom
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -32407,7 +32877,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (67)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1656650560
@@ -32453,7 +32924,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (28)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1656978516
@@ -32907,7 +33379,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.992107
+      value: 62.99
       objectReference: {fileID: 0}
     - target: {fileID: 4962032103421230, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -32941,7 +33413,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (18)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1676460093
@@ -33099,7 +33572,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (47)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1685773522
@@ -33273,7 +33747,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691223524}
-  - component: {fileID: 1691223523}
   m_Layer: 8
   m_Name: BlocksDown (9)
   m_TagString: Floor
@@ -33281,31 +33754,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1691223523
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1691223522}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.9037051, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 10.582566, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1691223524
 Transform:
   m_ObjectHideFlags: 0
@@ -33614,7 +34062,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1707134904
@@ -33912,6 +34361,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 1713058649}
+--- !u!1 &1715502241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715502242}
+  - component: {fileID: 1715502243}
+  m_Layer: 0
+  m_Name: ToSecretRoom
+  m_TagString: Secret
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715502242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715502241}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.257, y: 0.6, z: -1.0576172}
+  m_LocalScale: {x: 0.47530773, y: 0.48299915, z: 1}
+  m_Children: []
+  m_Father: {fileID: 241356228}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1715502243
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715502241}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5628645, y: 0.09478181}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17385483, y: 0.07823168}
+  m_EdgeRadius: 0
 --- !u!1001 &1717169937
 Prefab:
   m_ObjectHideFlags: 0
@@ -34011,7 +34514,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1719261737
@@ -34057,7 +34561,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1719564924
@@ -34654,6 +35159,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.31677338
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.9541952
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -35026,6 +35551,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.32025546
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.96431255
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -35128,7 +35673,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1764970592
@@ -35174,7 +35720,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (76)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1766576622 stripped
@@ -35934,7 +36481,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1833702811}
-  - component: {fileID: 1833702810}
   m_Layer: 8
   m_Name: BlocksDown (19)
   m_TagString: Floor
@@ -35942,31 +36488,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1833702810
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1833702809}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1833702811
 Transform:
   m_ObjectHideFlags: 0
@@ -35998,7 +36519,7 @@ Transform:
   - {fileID: 745629930}
   - {fileID: 509590461}
   m_Father: {fileID: 0}
-  m_RootOrder: 208
+  m_RootOrder: 209
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1835218389
 Prefab:
@@ -36322,6 +36843,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 1848616720}
+--- !u!1 &1850567125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1719261737}
+--- !u!61 &1850567126
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850567125}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.48210442}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 1.284209}
+  m_EdgeRadius: 0
 --- !u!1001 &1855039724
 Prefab:
   m_ObjectHideFlags: 0
@@ -36421,7 +36972,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (86)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1860516466
@@ -36757,7 +37309,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (72)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1879130224
@@ -36816,6 +37369,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 1879130224}
+--- !u!1 &1880588577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 775827950}
+--- !u!61 &1880588578
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880588577}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.47814977}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 1.2762997}
+  m_EdgeRadius: 0
 --- !u!1001 &1885209156
 Prefab:
   m_ObjectHideFlags: 0
@@ -36965,6 +37548,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.0008562654
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.32208887
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -37176,7 +37779,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (31)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1908144694
@@ -37466,6 +38070,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 1913703624}
+--- !u!1 &1918035839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1957315309}
+--- !u!61 &1918035840
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918035839}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.1181883}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 2.5563767}
+  m_EdgeRadius: 0
 --- !u!1001 &1920420734
 Prefab:
   m_ObjectHideFlags: 0
@@ -37509,7 +38143,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1920535594
@@ -37520,7 +38155,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1920535596}
-  - component: {fileID: 1920535595}
   m_Layer: 8
   m_Name: BlocksDown (5)
   m_TagString: Floor
@@ -37528,31 +38162,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1920535595
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1920535594}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &1920535596
 Transform:
   m_ObjectHideFlags: 0
@@ -37679,7 +38288,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1923454460
@@ -38152,7 +38762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4957077235025948, guid: f621672055b95654ea36622186cac443, type: 2}
       propertyPath: m_RootOrder
-      value: 221
+      value: 219
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f621672055b95654ea36622186cac443, type: 2}
@@ -38205,7 +38815,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1950928469
@@ -38245,7 +38856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265150256430060, guid: a4dadd15bf8d3e04795e5451d97b466b, type: 2}
       propertyPath: m_RootOrder
-      value: 238
+      value: 236
       objectReference: {fileID: 0}
     - target: {fileID: 1591050590477492, guid: a4dadd15bf8d3e04795e5451d97b466b, type: 2}
       propertyPath: m_Name
@@ -38297,7 +38908,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (38)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1957315309
@@ -38343,7 +38955,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (52)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1960651533
@@ -38475,7 +39088,7 @@ Transform:
   m_LocalScale: {x: 4.4393086, y: 4.235988, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 204
+  m_RootOrder: 205
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1968681365
 Prefab:
@@ -38865,7 +39478,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
+  m_Offset: {x: 20.920465, y: -3.3029118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -38876,7 +39489,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
+  m_Size: {x: 48.616085, y: 1.3261487}
   m_EdgeRadius: 0
 --- !u!4 &1997410318
 Transform:
@@ -38885,7 +39498,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1997410316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105.96, y: -0.7, z: 1}
+  m_LocalPosition: {x: 105.96, y: -0.7, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1879130225}
@@ -38954,7 +39567,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2000753776
@@ -39000,7 +39614,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2001030466
@@ -39045,6 +39660,26 @@ Prefab:
     - target: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
       propertyPath: m_Name
       value: Wall block (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.16024107
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.6442835
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
@@ -39204,7 +39839,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (60)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2008835177
@@ -39572,7 +40208,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2046251538
@@ -39781,7 +40418,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2056690806
@@ -39879,7 +40517,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2062027023
@@ -39976,6 +40615,26 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.7968743
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.00000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.914397
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
@@ -39987,7 +40646,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2067039434}
-  - component: {fileID: 2067039433}
   m_Layer: 8
   m_Name: BlocksDown (20)
   m_TagString: Floor
@@ -39995,31 +40653,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2067039433
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2067039432}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &2067039434
 Transform:
   m_ObjectHideFlags: 0
@@ -40027,7 +40660,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2067039432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105.96, y: -1.37, z: 1}
+  m_LocalPosition: {x: 105.96, y: -1.37, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1804432547}
@@ -40051,7 +40684,7 @@ Transform:
   - {fileID: 717335235}
   - {fileID: 317105365}
   m_Father: {fileID: 0}
-  m_RootOrder: 209
+  m_RootOrder: 211
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2069277105
 Prefab:
@@ -40118,7 +40751,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2070349773}
   - component: {fileID: 2070349772}
-  - component: {fileID: 2070349771}
   - component: {fileID: 2070349770}
   m_Layer: 8
   m_Name: Medium pipe
@@ -40135,11 +40767,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 2070349769}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0035704821, y: -0.15960705}
+  m_Offset: {x: -0.000037550926, y: -0.010847151}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -40150,32 +40782,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5343441, y: 0.6607859}
-  m_EdgeRadius: 0
---- !u!61 &2070349771
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2070349769}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0071397573, y: 0.3192138}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.67, y: 0.98}
-    newSize: {x: 0.67, y: 0.98}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6557205, y: 0.29703093}
+  m_Size: {x: 0.61206317, y: 0.9583057}
   m_EdgeRadius: 0
 --- !u!212 &2070349772
 SpriteRenderer:
@@ -40230,7 +40837,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070349769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.2718, y: -2.351, z: 0}
+  m_LocalPosition: {x: 19.2718, y: -2.351, z: -1}
   m_LocalScale: {x: 2.1039, y: 2.0234876, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40417,8 +41024,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080324181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.748, y: -13.114, z: 10}
-  m_LocalScale: {x: 8.368516, y: 11.7756, z: 1}
+  m_LocalPosition: {x: 65.607, y: -12.884, z: 10}
+  m_LocalScale: {x: 10.597636, y: 11.281025, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 226
@@ -40752,7 +41359,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2095155714}
-  - component: {fileID: 2095155713}
   m_Layer: 8
   m_Name: BlocksDown (2)
   m_TagString: Floor
@@ -40760,31 +41366,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2095155713
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2095155712}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.656386, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.087928, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &2095155714
 Transform:
   m_ObjectHideFlags: 0
@@ -41047,6 +41628,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 2110530876}
+--- !u!1 &2110679011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110679014}
+  - component: {fileID: 2110679013}
+  m_Layer: 0
+  m_Name: SecretRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &2110679013
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110679011}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 26.991467
+  orthographic: 1
+  orthographic size: 3.9372559
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &2110679014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110679011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 65.16, y: -13.93, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 240
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2114213838
 Prefab:
   m_ObjectHideFlags: 0
@@ -41084,7 +41734,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4265150256430060, guid: a4dadd15bf8d3e04795e5451d97b466b, type: 2}
       propertyPath: m_RootOrder
-      value: 212
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 1591050590477492, guid: a4dadd15bf8d3e04795e5451d97b466b, type: 2}
       propertyPath: m_Name
@@ -41436,12 +42086,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2129330578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.80002, y: 1.07, z: 10}
-  m_LocalScale: {x: 4.4393086, y: 4.235988, z: 1}
+  m_LocalPosition: {x: 111.768, y: 1.07, z: 10}
+  m_LocalScale: {x: 4.4481874, y: 4.235988, z: 1}
   m_Children:
   - {fileID: 1040787324}
   m_Father: {fileID: 0}
-  m_RootOrder: 205
+  m_RootOrder: 206
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2129375394
 Prefab:
@@ -41609,7 +42259,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137591245}
-  - component: {fileID: 2137591244}
   m_Layer: 8
   m_Name: BlocksDown (16)
   m_TagString: Floor
@@ -41617,31 +42266,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2137591244
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2137591243}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.6311212, y: -2.9630952}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.5129137, y: 0.64651585}
-  m_EdgeRadius: 0
 --- !u!4 &2137591245
 Transform:
   m_ObjectHideFlags: 0
@@ -41866,7 +42490,8 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (36)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2142471507
@@ -42029,7 +42654,8 @@ Prefab:
       propertyPath: m_Name
       value: Blue brick block (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61176846631199244, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bde7bc0987178248a59595f4fb14a3c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2146743639
@@ -42069,7 +42695,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4635602531241760, guid: 902acbf5e7b73f44db9ac048ecdf0f37, type: 2}
       propertyPath: m_RootOrder
-      value: 206
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 1493211332278742, guid: 902acbf5e7b73f44db9ac048ecdf0f37, type: 2}
       propertyPath: m_Name

@@ -5,9 +5,13 @@ public class SpaceButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
 	public static bool IsPressed = false;
 	public static bool IsPressedDown = false;
+	public static bool IsPressedUp = false;
 
 	private float timer_pressed_down = 0;
-	private float time_pressed_down = 0.05f; 
+	private float time_pressed_down = 0.05f;
+
+	private float timer_pressed_up = 0;
+	private float time_pressed_up = 0.5f;
 
 	private void Update()
 	{
@@ -18,6 +22,15 @@ public class SpaceButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 			{
 				timer_pressed_down = 0;
 				IsPressedDown = false;
+			}
+		}
+		if (IsPressedUp)
+		{
+			timer_pressed_up += Time.deltaTime;
+			if (timer_pressed_up >= time_pressed_up)
+			{
+				timer_pressed_up = 0;
+				IsPressedUp = false;
 			}
 		}
 	}
@@ -31,5 +44,6 @@ public class SpaceButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 	public void OnPointerUp(PointerEventData eventData)
 	{
 		IsPressed = false;
+		IsPressedUp = true;
 	}
 }

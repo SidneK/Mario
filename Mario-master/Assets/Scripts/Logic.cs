@@ -2,7 +2,8 @@
 
 public class Logic : MonoBehaviour
 {
-	public AudioSource BackgroundSound;
+	public AudioSource BackgroundMain;
+	public AudioSource BackgroundSecret;
 	public AudioSource JumpLittle;
 	public AudioSource JumpSupper;
 	public AudioSource MarioDie;
@@ -13,8 +14,12 @@ public class Logic : MonoBehaviour
 	public AudioSource UnEnableBlock;
 	public AudioSource BreakBlock;
 	public AudioSource Coin;
+	public AudioSource PipeAndDownLevel;
 	public GameObject Mushroom;
 	public GameObject Flower;
+	public GameObject MarioLittle;
+	public GameObject MarioBig;
+	public GameObject MarioFire;
 	// public GameObject Coin;
 	public bool IsImmortalPlayer;
 	public bool StayPlayer;
@@ -31,7 +36,6 @@ public class Logic : MonoBehaviour
 		StayPlayer = false;
 		IsGameOver = false;
 		IsPause = false;
-		ModePlayer = Mode.LITTLE;
 	}
 
 }
