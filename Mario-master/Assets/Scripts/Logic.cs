@@ -20,7 +20,7 @@ public class Logic : MonoBehaviour
 	public GameObject MarioLittle;
 	public GameObject MarioBig;
 	public GameObject MarioFire;
-	// public GameObject Coin;
+	public GameObject CoinFromBlock;
 	public bool IsImmortalPlayer;
 	public bool StayPlayer;
 	public bool IsPause;

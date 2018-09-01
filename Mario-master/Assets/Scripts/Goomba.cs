@@ -7,11 +7,14 @@ public class Goomba : MonoBehaviour
 {
     public float speed = 2.0F;
     private bool isDead = false;
+	private bool isActive = false;
+	private const float necessary_distance_for_activation = 15f;
 
-    private Animator anim;
+	private Animator anim;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private Vector3 direction;
+	private GameObject Player;
     
     private GoombaState State
     {
@@ -28,42 +31,56 @@ public class Goomba : MonoBehaviour
     private void Start()
     {
         direction = -transform.right;
+		Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
-        State = GoombaState.Moving;
+		if (Player == null)
+			Player = GameObject.FindGameObjectWithTag("Player");
+		if (isActive)
+		{
+			State = GoombaState.Moving;
 
-        if (!isDead)
-        {
-            rb.velocity = direction * speed;
-            State = GoombaState.Moving;
-        }
-        else
-            State = GoombaState.Stomp;
-    }
+			if (!isDead)
+			{
+				rb.velocity = direction * speed;
+				State = GoombaState.Moving;
+			}
+			else
+				State = GoombaState.Stomp;
+		}
+		else
+		{
+			if (transform.position.x - Player.transform.position.x <= necessary_distance_for_activation)
+				isActive = true;
+		}
+	}
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        //Debug.Log(col.gameObject.name);
+		//Debug.Log(col.gameObject.name);
 
-        if ((col.gameObject.tag == "Block" && col.transform.position.y > gameObject.transform.position.y) || col.gameObject.tag == "Enemy")
-            direction *= -1.0F;
+		if (isActive)
+		{
+			if ((col.gameObject.tag == "Block" && col.transform.position.y > gameObject.transform.position.y) || col.gameObject.tag == "Enemy")
+				direction *= -1.0F;
 
-        if (col.gameObject.tag == "Player")
-        {
-            if (Mathf.Abs(col.gameObject.transform.position.x - transform.position.x) < 0.5F)
-            {
-                isDead = true;
-                GetComponent<BoxCollider2D>().enabled = false;
-                rb.gravityScale = 0;
-                rb.velocity = Vector3.zero;
-                Destroy(gameObject, 0.4F);
-            }
-        }
-        else if (col.gameObject.tag == "Bullet")
-            InstantKill();
-    }
+			if (col.gameObject.tag == "Player")
+			{
+				if (Mathf.Abs(col.gameObject.transform.position.x - transform.position.x) < 0.5F)
+				{
+					isDead = true;
+					GetComponent<BoxCollider2D>().enabled = false;
+					rb.gravityScale = 0;
+					rb.velocity = Vector3.zero;
+					Destroy(gameObject, 0.4F);
+				}
+			}
+			else if (col.gameObject.tag == "Bullet")
+				InstantKill();
+		}
+	}
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

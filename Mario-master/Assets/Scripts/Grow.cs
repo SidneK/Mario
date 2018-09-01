@@ -55,10 +55,12 @@ public class Grow : MonoBehaviour
 			}
 			Logic.Instance.MarioUp.Play();
 		}
-		// * need to add a condition, if Mario's killing a enemy
 		else if (collision.gameObject.tag == "Enemy" && Logic.Instance.ModePlayer != Mode.LITTLE)
 		{
 			different.SetInteger("State", (int)State.IMMORTAL);
+			body_player.constraints = RigidbodyConstraints2D.FreezeAll;
+			GetComponent<BoxCollider2D>().enabled = false;
+			GetComponent<CircleCollider2D>().enabled = false;
 			Logic.Instance.StayPlayer = true;
 			Logic.Instance.IsImmortalPlayer = true;
 			Logic.Instance.PipeAndDownLevel.Play();
@@ -102,6 +104,9 @@ public class Grow : MonoBehaviour
 		if (immortal_timer >= 2 && Logic.Instance.StayPlayer)
 		{
 			Logic.Instance.StayPlayer = false;
+			body_player.constraints &= ~RigidbodyConstraints2D.FreezePosition;
+			GetComponent<BoxCollider2D>().enabled = true;
+			GetComponent<CircleCollider2D>().enabled = true;
 			ChangeMode(Mode.LITTLE);
 		}
 		if (immortal_timer >= immortal_time)

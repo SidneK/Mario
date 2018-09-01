@@ -20,16 +20,18 @@ public class PushBlock : MonoBehaviour
 		isUsed = false;
 		isPush = false;
 		pushing_timer = 0;
-		pushing_time = 0.15f;
+		pushing_time = 0.3f;
 	}
 
 	private void FixedUpdate()
 	{
 		if (isPush)
 		{
-			Push(body_block, PushForce);
+			Push(body_block, PushForce - 0.5f);
 			if (gameObject.tag == "BonusBlock")
-				Push(bonus.transform, PushForce - 0.5f);
+				Push(bonus.transform, PushForce);
+			else if (gameObject.tag == "CoinBlock")
+				Push(bonus.transform, PushForce * 4);
 			pushing_timer += Time.fixedDeltaTime;
 			if (pushing_timer >= pushing_time)
 			{
@@ -45,20 +47,29 @@ public class PushBlock : MonoBehaviour
 			Push(body_block, PushForce, -1);
 			if (gameObject.tag == "BonusBlock")
 				Push(bonus.transform, PushForce);
+			else if (gameObject.tag == "CoinBlock")
+				Push(bonus.transform, -PushForce * 4);
+		}
+		else if (isUsed && bonus != null && body_block.position.y <= basic_position)
+		{
+			if (gameObject.tag == "CoinBlock")
+				Destroy(bonus);
 		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (!isUsed)
+		if (!isUsed && !isPush)
 		{
-			if (collision.gameObject.tag == "Player" && collision.transform.position.y < body_block.position.y)
+			if (collision.gameObject.tag == "Player" && collision.transform.position.y < body_block.position.y
+				&& Mathf.Abs(body_block.position.x - collision.transform.position.x) < 0.3f
+				&& collision.otherCollider is BoxCollider2D)
 			{
 				isPush = true;
 				InstantiateBonus();
 			}
 		}
-		else
+		else if (isUsed)
 		{
 			if (collision.gameObject.tag == "Player" && collision.transform.position.y < body_block.position.y)
 				Logic.Instance.UnEnableBlock.Play();
@@ -93,6 +104,7 @@ public class PushBlock : MonoBehaviour
 		}
 		else if (gameObject.tag == "CoinBlock")
 		{
+			bonus = Instantiate(Logic.Instance.CoinFromBlock, body_block.position, Quaternion.identity);
 			Logic.Instance.Coin.Play();
 			SetUnEnableBlock();
 		}

@@ -7,13 +7,16 @@ public class Koopa : MonoBehaviour
 {
     public float speed = 1.7F;
     private int lives = 3;
+	private bool isActive = false;
+	private const float necessary_distance_for_activation = 15f;
 
-    private Animator anim;
+	private Animator anim;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private Vector3 direction;
+	private GameObject Player;
 
-    private KoopaState State
+	private KoopaState State
     {
         get { return (KoopaState)anim.GetInteger("State"); }
         set { anim.SetInteger("State", (int)value); }
@@ -25,19 +28,30 @@ public class Koopa : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-    }
+		Player = GameObject.FindGameObjectWithTag("Player");
+	}
 
     private void Update()
     {
-        Move();
+		if (Player == null)
+			Player = GameObject.FindGameObjectWithTag("Player");
+		if (isActive)
+		{
+			Move();
 
-        if (lives == 3)
-        {
-            State = KoopaState.Moving;
-        }
-        else
-            State = KoopaState.Stomp;
-    }
+			if (lives == 3)
+			{
+				State = KoopaState.Moving;
+			}
+			else
+				State = KoopaState.Stomp;
+		}
+		else
+		{
+			if (transform.position.x - Player.transform.position.x <= necessary_distance_for_activation)
+				isActive = true;
+		}
+	}
 
     private void Move()
     {

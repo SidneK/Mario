@@ -34,7 +34,7 @@ public class Teleport : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.gameObject.tag == "Main")
+		if (collision.gameObject.tag == "Main" && !isTeleport)
 		{
 			isTeleport = true;
 			direction = Direction.RIGHT;
@@ -51,6 +51,8 @@ public class Teleport : MonoBehaviour
 			GetComponent<BoxCollider2D>().enabled = false;
 			GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
 			Logic.Instance.PipeAndDownLevel.Play();
+			if (Logic.Instance.ModePlayer == Mode.LITTLE)
+				time_on_direction = 1f;
 			Invoke("PlayBackgroundMain", time_on_direction);
 		}
 	}

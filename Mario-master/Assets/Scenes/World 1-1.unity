@@ -4541,6 +4541,8 @@ MonoBehaviour:
     type: 2}
   MarioBig: {fileID: 1915150072179638, guid: c4652c5b428a0a848943b16aec95f6d3, type: 2}
   MarioFire: {fileID: 1849023047903404, guid: 4fdbb2cad487c63478fdf5afd78f23e3, type: 2}
+  CoinFromBlock: {fileID: 1549542944026896, guid: f45d5ea0622620f4f9fb8779d3803cf6,
+    type: 2}
   IsImmortalPlayer: 0
   StayPlayer: 0
   IsPause: 0
@@ -5184,7 +5186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241356226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.364, y: -1.997, z: -1}
+  m_LocalPosition: {x: 33.364, y: -1.997, z: -2}
   m_LocalScale: {x: 2.1039, y: 2.070397, z: 1}
   m_Children:
   - {fileID: 1715502242}
@@ -14755,11 +14757,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.005
+      value: -4.421
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.048
+      value: -3.025
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14804,6 +14806,31 @@ Prefab:
       propertyPath: SpawnMainRoom
       value: 
       objectReference: {fileID: 956532744}
+    - target: {fileID: 61792467189707948, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.060085595
+      objectReference: {fileID: 0}
+    - target: {fileID: 61792467189707948, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 61792467189707948, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.19541156
+      objectReference: {fileID: 0}
+    - target: {fileID: 61792467189707948, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.006049454
+      objectReference: {fileID: 0}
+    - target: {fileID: 61792467189707948, guid: 9630fc09da58824409e6aa6ee0f40b02,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.18922317
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
   m_IsPrefabAsset: 0
@@ -38503,7 +38530,13 @@ Prefab:
       propertyPath: m_Name
       value: Wall block (37)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1933841984

@@ -11,7 +11,7 @@ public class SpaceButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 	private float time_pressed_down = 0.05f;
 
 	private float timer_pressed_up = 0;
-	private float time_pressed_up = 0.5f;
+	private float time_pressed_up = 0.4f;
 
 	private void Update()
 	{
