@@ -7,13 +7,15 @@ public class Koopa : MonoBehaviour
 {
     public float speed = 1.7F;
     private int lives = 3;
+	private bool isActive = false;
+	private const float distanceToActivate = 15f;
 
-    private Animator anim;
+	private Animator anim;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private Vector3 direction;
 
-    private KoopaState State
+	private KoopaState State
     {
         get { return (KoopaState)anim.GetInteger("State"); }
         set { anim.SetInteger("State", (int)value); }
@@ -25,29 +27,35 @@ public class Koopa : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-    }
+	}
 
     private void Update()
     {
-        Move();
+		if (isActive)
+		{
+			Move();
 
-        if (lives == 3)
-        {
-            State = KoopaState.Moving;
-        }
-        else
-            State = KoopaState.Stomp;
-    }
+			if (lives == 3)
+			{
+				State = KoopaState.Moving;
+			}
+			else
+				State = KoopaState.Stomp;
+		}
+		else
+		{
+			if (Logic.Instance.Player == null)
+				Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
+			else
+				if (transform.position.x - Logic.Instance.Player.transform.position.x <= distanceToActivate)
+					isActive = true;
+		}
+	}
 
     private void Move()
     {
         sprite.flipX = direction.x > 0.0F;
-        /*
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.5F + transform.right * direction.x * 0.5F, 0.1F);
 
-        if (colliders.Length > 0 && colliders.All(x => !x.GetComponent<Movement>()))
-            direction *= -1.0F;
-        */
         if (lives == 2 || lives == 0)
             speed = 0;
 
@@ -59,7 +67,7 @@ public class Koopa : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if ((col.gameObject.tag == "Block" && col.transform.position.y > gameObject.transform.position.y) || (col.gameObject.tag == "Enemy" && lives != 1))
+        if ((col.gameObject.tag == "Block" && col.transform.position.y >= gameObject.transform.position.y) || (col.gameObject.tag == "Enemy" && lives != 1))
             direction *= -1.0F;
 
         if (col.gameObject.tag == "Player")
@@ -70,7 +78,7 @@ public class Koopa : MonoBehaviour
 
                 if(lives == 1)
                 {
-                    gameObject.tag = "Bullet";
+                    gameObject.tag = "Drift";
                     if (col.gameObject.transform.position.x < gameObject.transform.position.x)
                         direction = transform.right;
                 }
@@ -83,6 +91,12 @@ public class Koopa : MonoBehaviour
                     Destroy(gameObject, 0.4F);
                 }
             }
+        }
+        else if(col.gameObject.tag == "Bullet" || col.gameObject.tag == "Drift")
+        {
+            lives = 2;
+            sprite.flipY = true;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
