@@ -8,7 +8,11 @@ public class Goomba : MonoBehaviour
     public float speed = 2.0F;
     private bool isDead = false;
 	private bool isActive = false;
+HEAD
 	private const float distanceToActivate = 15f;
+
+	private const float necessary_distance_for_activation = 15f;
+8a3a0ad0a6f5b2f9438b577679629a7e04205e65
 
 	private Animator anim;
     private Rigidbody2D rb;
@@ -50,16 +54,28 @@ public class Goomba : MonoBehaviour
 		}
 		else
 		{
+HEAD
             if (Logic.Instance.Player == null)
                 Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
             else
                 if (transform.position.x - Logic.Instance.Player.transform.position.x <= distanceToActivate)
+
+			if (Logic.Instance.Player == null)
+				Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
+			else
+				if (transform.position.x - Logic.Instance.Player.transform.position.x <= necessary_distance_for_activation)
+ 8a3a0ad0a6f5b2f9438b577679629a7e04205e65
 					isActive = true;
 		}
 	}
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+HEAD
+
+		//Debug.Log(col.gameObject.name);
+
+8a3a0ad0a6f5b2f9438b577679629a7e04205e65
 		if (isActive)
 		{
 			if ((col.gameObject.tag == "Block" && col.transform.position.y > gameObject.transform.position.y) || col.gameObject.tag == "Enemy")
@@ -77,11 +93,16 @@ public class Goomba : MonoBehaviour
 					Destroy(gameObject, 0.4F);
 				}
 			}
+HEAD
 			else if (col.gameObject.tag == "Bullet" || col.gameObject.tag == "Drift")
             {
                 sprite.flipY = true;
                 GetComponent<BoxCollider2D>().enabled = false;
             }
+
+			else if (col.gameObject.tag == "Bullet")
+				InstantKill();
+8a3a0ad0a6f5b2f9438b577679629a7e04205e65
 		}
 	}
 

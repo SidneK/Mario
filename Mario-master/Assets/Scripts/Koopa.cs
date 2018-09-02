@@ -8,7 +8,11 @@ public class Koopa : MonoBehaviour
     public float speed = 1.7F;
     private int lives = 3;
 	private bool isActive = false;
+HEAD
 	private const float distanceToActivate = 15f;
+
+	private const float necessary_distance_for_activation = 15f;
+8a3a0ad0a6f5b2f9438b577679629a7e04205e65
 
 	private Animator anim;
     private Rigidbody2D rb;
@@ -47,7 +51,11 @@ public class Koopa : MonoBehaviour
 			if (Logic.Instance.Player == null)
 				Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
 			else
+HEAD
 				if (transform.position.x - Logic.Instance.Player.transform.position.x <= distanceToActivate)
+
+				if (transform.position.x - Logic.Instance.Player.transform.position.x <= necessary_distance_for_activation)
+ 8a3a0ad0a6f5b2f9438b577679629a7e04205e65
 					isActive = true;
 		}
 	}
