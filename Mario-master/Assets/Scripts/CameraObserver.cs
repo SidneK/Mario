@@ -2,8 +2,6 @@
 
 public class CameraObserver : MonoBehaviour
 {
-	public GameObject Player;
-
 	private Transform position_camera;
 	private float max_player_x;
 
@@ -15,15 +13,15 @@ public class CameraObserver : MonoBehaviour
 
 	private void Update()
 	{
-		if (Player == null) // if old mario is destroy, then need find the reference on the new Mario
-			Player = GameObject.FindGameObjectWithTag("Player");
-		if (Player.transform.position.x > max_player_x)
+		if (Logic.Instance.Player == null)
+			Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
+		if (Logic.Instance.Player.transform.position.x > max_player_x)
 		{
-			if (Player.transform.position.x < 0)
-				max_player_x = Player.transform.position.x + 0.01f;
+			if (Logic.Instance.Player.transform.position.x < 0)
+				max_player_x = Logic.Instance.Player.transform.position.x + 0.01f;
 			else
-				max_player_x = Player.transform.position.x - 0.01f;
-			position_camera.position = new Vector3(Player.transform.position.x, position_camera.position.y, -10);
+				max_player_x = Logic.Instance.Player.transform.position.x - 0.01f;
+			position_camera.position = new Vector3(Logic.Instance.Player.transform.position.x, position_camera.position.y, -10);
 		}
 	}
 }

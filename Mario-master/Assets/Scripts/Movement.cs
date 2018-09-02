@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
 		drift_timer = 0;
 		drift_time = 0.3f;
 		timer_on_drift = 0;
-		time_on_drift = 0.5f;
+		time_on_drift = 0.4f;
 		basic_jump_force = JumpForce;
 		basic_speed = Speed;
 		last_direction = 1;
@@ -71,7 +71,7 @@ public class Movement : MonoBehaviour
 		{
 			agony_timer += Time.deltaTime;
 			if (agony_timer >= agony_time)
-				SceneManager.LoadScene("World 1-1");
+				Logic.Instance.TransitToCurrentLevel();
 		}
 		else
 		{
@@ -105,6 +105,12 @@ public class Movement : MonoBehaviour
 			Destroy(collision.gameObject);
 			Logic.Instance.Coin.Play();
 		}
+		else if (collision.gameObject.tag == "NextLevel")
+		{
+			body_player.constraints = RigidbodyConstraints2D.FreezeAll;
+			flip.enabled = false; // invisible player
+			Invoke("TransitToCurrentLevel", 2.5f);
+		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -133,16 +139,6 @@ public class Movement : MonoBehaviour
 				Speed = basic_speed;
 				state.SetInteger("State", (int)State.IDLE);
 			}
-			/*if (Input.GetAxis("Horizontal") != 0)
-			{
-				Flip(Input.GetAxis("Horizontal"));
-				state.SetInteger("State", (int)State.RUN);
-			}
-			else
-			{
-				Speed = basic_speed;
-				state.SetInteger("State", (int)State.IDLE);
-			}*/
 		}
 		body_player.AddForce(new Vector2(InputUI.GetAxis("Horizontal") * Speed, body_player.velocity.y));
 		body_player.AddForce(new Vector2(Input.GetAxis("Horizontal") * Speed, body_player.velocity.y));
@@ -217,6 +213,16 @@ public class Movement : MonoBehaviour
 		FireButton.IsPressedDown = false; // because Mario can't shoot sitting down
 		state.SetInteger("State", (int)State.DEATH_OR_SIT);
 	}
+
+	private void TransitToNextLevel()
+	{
+		Logic.Instance.TransitToCurrentLevel();
+	}
+
+	private void TransitToCurrentLevel()
+	{
+		Logic.Instance.TransitToCurrentLevel();
+	}
 }
 
 public enum State
@@ -231,5 +237,8 @@ public enum State
 	// all besides little
 	IMMORTAL = 6,
 	// only the fire mode
-	SHOOT = 7
+	SHOOT = 7,
+	// all mode
+	FALL_DOWN = 8,
+	DRAW_FLAG = 9
 };

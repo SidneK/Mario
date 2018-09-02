@@ -14,7 +14,6 @@ public class Koopa : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private Vector3 direction;
-	private GameObject Player;
 
 	private KoopaState State
     {
@@ -28,13 +27,10 @@ public class Koopa : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-		Player = GameObject.FindGameObjectWithTag("Player");
 	}
 
     private void Update()
     {
-		if (Player == null)
-			Player = GameObject.FindGameObjectWithTag("Player");
 		if (isActive)
 		{
 			Move();
@@ -48,8 +44,11 @@ public class Koopa : MonoBehaviour
 		}
 		else
 		{
-			if (transform.position.x - Player.transform.position.x <= necessary_distance_for_activation)
-				isActive = true;
+			if (Logic.Instance.Player == null)
+				Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
+			else
+				if (transform.position.x - Logic.Instance.Player.transform.position.x <= necessary_distance_for_activation)
+					isActive = true;
 		}
 	}
 

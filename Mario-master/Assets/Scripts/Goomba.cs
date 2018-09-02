@@ -31,13 +31,10 @@ public class Goomba : MonoBehaviour
     private void Start()
     {
         direction = -transform.right;
-		Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
-		if (Player == null)
-			Player = GameObject.FindGameObjectWithTag("Player");
 		if (isActive)
 		{
 			State = GoombaState.Moving;
@@ -52,8 +49,11 @@ public class Goomba : MonoBehaviour
 		}
 		else
 		{
-			if (transform.position.x - Player.transform.position.x <= necessary_distance_for_activation)
-				isActive = true;
+			if (Logic.Instance.Player == null)
+				Logic.Instance.Player = GameObject.FindGameObjectWithTag("Player");
+			else
+				if (transform.position.x - Logic.Instance.Player.transform.position.x <= necessary_distance_for_activation)
+					isActive = true;
 		}
 	}
 
@@ -70,6 +70,7 @@ public class Goomba : MonoBehaviour
 			{
 				if (Mathf.Abs(col.gameObject.transform.position.x - transform.position.x) < 0.5F)
 				{
+					Logic.Instance.KillEnemy.Play();
 					isDead = true;
 					GetComponent<BoxCollider2D>().enabled = false;
 					rb.gravityScale = 0;

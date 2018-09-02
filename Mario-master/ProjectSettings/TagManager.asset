@@ -17,6 +17,13 @@ TagManager:
   - Secret
   - Main
   - UpPlayer
+  - Win
+  - NextLevel
+  - ButtonLeft
+  - ButtonRight
+  - ButtonDown
+  - ButtonAttack
+  - ButtonJump
   layers:
   - Default
   - TransparentFX
@@ -28,7 +35,7 @@ TagManager:
   - 
   - NormalBlocks
   - Player
-  - 
+  - Ignore Player
   - 
   - 
   - 

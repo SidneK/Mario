@@ -34,6 +34,18 @@ public class TurnCamera : MonoBehaviour
 				break;
 		}
 	}
+
+	public void SetInActiveCamera()
+	{
+		GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+		MainCamera.GetComponent<CameraObserver>().enabled = false;
+	}
+
+	public void SetActiveCamera()
+	{
+		GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+		MainCamera.GetComponent<CameraObserver>().enabled = true;
+	}
 }
 
 public enum World

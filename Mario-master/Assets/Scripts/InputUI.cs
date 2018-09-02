@@ -2,6 +2,12 @@
 
 public class InputUI : MonoBehaviour
 {
+	private void Update()
+	{
+		if (Logic.Instance.IsPause && Input.GetMouseButtonDown(0))
+			Logic.Instance.IsPause = false;
+	}
+
 	public static bool GetKey(UIKeyCode UIKey)
 	{
 		switch (UIKey)
@@ -73,6 +79,12 @@ public class InputUI : MonoBehaviour
 		if (axisName == "Horizontal")
 			return MoveButton.Horizontal;
 		throw new System.Exception("Such the axisName isn't existence");
+	}
+
+	public void UseButton(string name)
+	{
+		if (name == "Pause")
+			Logic.Instance.IsPause = true;
 	}
 }
 
