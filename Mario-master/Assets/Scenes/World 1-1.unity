@@ -11748,6 +11748,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 530331845}
+--- !u!1 &531622471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1194202218}
+--- !u!60 &531622472
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531622471}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.79807436, y: 1.1147074}
+      - {x: 0.79824066, y: 0.79599273}
+      - {x: 0.47883046, y: 0.7962995}
+      - {x: 0.4786925, y: 0.47596002}
+      - {x: 0.1603083, y: 0.47627556}
+      - {x: 0.16104418, y: 0.16130996}
+      - {x: -0.16, y: 0.16}
+      - {x: -0.16, y: -0.16}
+      - {x: 0.16, y: -0.16}
+      - {x: 1.1181709, y: -0.15986788}
+      - {x: 1.1182559, y: 1.1144067}
 --- !u!1 &531777092
 GameObject:
   m_ObjectHideFlags: 0
@@ -15268,11 +15308,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.33
+      value: 62.08
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.01
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 4364510383712312, guid: 9630fc09da58824409e6aa6ee0f40b02, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16135,6 +16175,10 @@ Prefab:
     - target: {fileID: 1049005956797058, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
       propertyPath: m_Name
       value: Goomba (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049005956797058, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
@@ -24670,7 +24714,13 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.9550124
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1197187196
@@ -25233,6 +25283,10 @@ Prefab:
       propertyPath: m_Name
       value: Goomba (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1049005956797058, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
   m_IsPrefabAsset: 0
@@ -25655,6 +25709,10 @@ Prefab:
     - target: {fileID: 4581756328823468, guid: b2a967d9a02be32409ca07699343bd2a, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344839538443338, guid: b2a967d9a02be32409ca07699343bd2a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a967d9a02be32409ca07699343bd2a, type: 2}
@@ -27184,6 +27242,10 @@ Prefab:
       propertyPath: m_Name
       value: Goomba (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1049005956797058, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
   m_IsPrefabAsset: 0
@@ -28171,7 +28233,13 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.6339062
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1378174634 stripped
@@ -32571,7 +32639,13 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.3174491
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61154990461485488, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d51eb1ca8613c52459942c968e8ae6f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1608367554
@@ -37645,36 +37719,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4255020659414516, guid: 4d461b6677162824ba00641f2b061699,
     type: 2}
   m_PrefabInternal: {fileID: 1848616720}
---- !u!1 &1850567125 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1505042527294950, guid: d51eb1ca8613c52459942c968e8ae6f2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1719261737}
---- !u!61 &1850567126
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1850567125}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 871f2b68e75d0134682dedf750914db4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.48210442}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32, y: 1.284209}
-  m_EdgeRadius: 0
 --- !u!1001 &1855039724
 Prefab:
   m_ObjectHideFlags: 0
@@ -40320,6 +40364,10 @@ Prefab:
     - target: {fileID: 1049005956797058, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
       propertyPath: m_Name
       value: Goomba (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049005956797058, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3d7f70f53f1464cb306854fb7816ed, type: 2}

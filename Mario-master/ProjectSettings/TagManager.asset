@@ -24,6 +24,7 @@ TagManager:
   - ButtonDown
   - ButtonAttack
   - ButtonJump
+  - Drift
   layers:
   - Default
   - TransparentFX
